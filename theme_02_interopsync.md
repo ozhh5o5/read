@@ -12,23 +12,19 @@ InteropSync Karnataka is a *production-grade bidirectional sync middleware*. It 
 
 **Core Features**
 
-| Feature | What It Does | Why No Competitor Has This |
-|---|---|---|
-| **LLM-Driven Auto Schema Mapping** | Feeds each department's live database schema into a fine-tuned LLM that generates a unified [Knowledge Graph](https://en.wikipedia.org/wiki/Knowledge_graph). Maps fields like *comp_name* in Labour Dept → *enterprise_title* in SWS → *firm_id* in Commercial Tax automatically. When a department pushes a schema update, the Knowledge Graph self-heals in under 60 seconds with zero human intervention. | NIC's existing middleware uses static XML mappings that break on every schema change. [MuleSoft](https://www.mulesoft.com/) and [Dell Boomi](https://boomi.com/) require months of manual configuration per department. InteropSync onboards a new department in under 1 hour. |
-| **Causal Conflict Resolution Engine** | When two departments update the same business record simultaneously, the system runs a [Causal Inference Engine](https://www.microsoft.com/en-us/research/project/dowhy-an-end-to-end-library-for-causal-inference/) that models the downstream regulatory impact of each conflicting value. It picks the update that maintains the highest statutory compliance across all connected departments. Every resolution ships with a machine-generated legal justification. | Every existing system picks the latest timestamp arbitrarily. No government middleware in India performs impact-based conflict resolution. |
-| **Tamper-Proof Cryptographic Audit Chain** | Every propagation event — who changed what, when, from which system — is hashed into an append-only cryptographic log. This log is independently verifiable by any department, any auditor, any [RTI](https://rti.gov.in/) query. No single department controls the log. No record is deletable. | No Indian government interoperability system provides a tamper-proof, independently verifiable audit chain today. |
-| **Department Health Dashboard & SLA Enforcement** | A live command center shows sync health of every connected department: latency, failure rate, schema drift score, and pending conflicts. Departments that consistently lag receive automated escalation alerts to their IT nodal officers. | Standard middleware provides no visibility into department-level sync performance or accountability enforcement. |
-| **Offline-First Sync for Rural District Offices** | District-level offices with intermittent connectivity queue all updates locally. The moment connectivity is restored, InteropSync replays and merges queued changes without data loss or duplication. This brings every taluk-level office into the interoperability network. | No existing solution accounts for India's rural connectivity gaps in government data sync. |
+**1. LLM-Driven Auto Schema Mapping** — Feeds each department's live database schema into a fine-tuned LLM that generates a unified [Knowledge Graph](https://en.wikipedia.org/wiki/Knowledge_graph). Maps fields like *comp_name* in Labour Dept → *enterprise_title* in SWS → *firm_id* in Commercial Tax automatically. When a department pushes a schema update, the Knowledge Graph self-heals in under 60 seconds with zero human intervention. NIC's existing middleware uses static XML mappings that break on every schema change. [MuleSoft](https://www.mulesoft.com/) and [Dell Boomi](https://boomi.com/) require months of manual configuration per department. InteropSync onboards a new department in under 1 hour.
+
+**2. Causal Conflict Resolution Engine** — When two departments update the same business record simultaneously, the system runs a [Causal Inference Engine](https://www.microsoft.com/en-us/research/project/dowhy-an-end-to-end-library-for-causal-inference/) that models the downstream regulatory impact of each conflicting value. It picks the update that maintains the highest statutory compliance across all connected departments. Every resolution ships with a machine-generated legal justification. No government middleware in India performs impact-based conflict resolution — every existing system picks the latest timestamp arbitrarily.
+
+**3. Tamper-Proof Cryptographic Audit Chain** — Every propagation event — who changed what, when, from which system — is hashed into an append-only cryptographic log. This log is independently verifiable by any department, any auditor, any [RTI](https://rti.gov.in/) query. No single department controls the log. No record is deletable.
+
+**4. Department Health Dashboard & SLA Enforcement** — A live command center shows sync health of every connected department: latency, failure rate, schema drift score, and pending conflicts. Departments that consistently lag receive automated escalation alerts to their IT nodal officers.
+
+**5. Offline-First Sync for Rural District Offices** — District-level offices with intermittent connectivity queue all updates locally. The moment connectivity is restored, InteropSync replays and merges queued changes without data loss or duplication. This brings every taluk-level office into the interoperability network.
 
 **Who Benefits**
 
-| Audience | Direct Benefit |
-|---|---|
-| **40+ Karnataka departments** | Single source of truth, zero manual re-entry |
-| **10,000+ businesses using SWS** | Approvals clear in hours instead of weeks |
-| **District and taluk offices** | Full participation despite poor rural connectivity |
-| **CAG / audit bodies** | Tamper-proof trail for every data movement |
-| **Citizens filing RTI** | Verifiable, timestamped government action logs |
+**40+ Karnataka departments** get a single source of truth with zero manual re-entry. **10,000+ businesses using SWS** see approvals clear in hours instead of weeks. **District and taluk offices** participate fully despite poor rural connectivity. **CAG and audit bodies** get a tamper-proof trail for every data movement. **Citizens filing RTI** get verifiable, timestamped government action logs.
 
 **Key References**
 
